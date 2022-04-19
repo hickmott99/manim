@@ -118,3 +118,44 @@ Commands:
   Made with <3 by Manim Community developers.
 """
     assert dedent(expected_output) == result.output
+
+
+def test_manim_help_command():
+    command = ["--help"]
+    runner = CliRunner()
+    result = runner.invoke(main, command, prog_name="manim")
+
+    expected_output = """Manim Community v0.15.1
+
+Usage: manim [OPTIONS] COMMAND [ARGS]...
+
+  Animation engine for explanatory math videos
+
+Options:
+  --version  Show version and exit.
+  --help     Show this message and exit.
+
+Commands:
+  render*  Render SCENE(S) from the input FILE.
+
+           detailed usage: manim render --help.
+  cfg      Manages Manim configuration files.
+
+           detailed usage: manim cfg --help.
+  init     Sets up a new project in current working directory with default
+           settings.
+
+           It copies files from templates directory and pastes them in the
+           current working dir.
+
+           detailed usage: manim init --help.
+  new      Create a new project or insert a new scene.
+
+           detailed usage: manim new --help.
+  plugins  Manages Manim plugins.
+
+           detailed usage: manim plugins --help.
+
+  Made with <3 by Manim Community developers."""
+
+    assert dedent(expected_output) == result.output
