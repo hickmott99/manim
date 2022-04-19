@@ -27,6 +27,7 @@ from .render_options import render_options
 @cloup.command(
     context_settings=None,
     epilog=EPILOG,
+    help="Render SCENE(S) from the input FILE.",
     short_help="""Render SCENE(S) from the input FILE.\n
 detailed usage: manim render --help.""",
 )

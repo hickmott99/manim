@@ -119,6 +119,7 @@ def replace_keys(default: dict) -> dict:
     invoke_without_command=True,
     no_args_is_help=True,
     epilog=EPILOG,
+    help="Manages Manim configuration files.",
     short_help="""Manages Manim configuration files.\n
 detailed usage: manim cfg --help.""",
 )
