@@ -179,6 +179,7 @@ def scene(**args):
     invoke_without_command=True,
     no_args_is_help=True,
     epilog=EPILOG,
+    help="Create a new project or insert a new scene.",
     short_help="""Create a new project or insert a new scene.\n
 detailed usage: manim new --help.""",
 )
